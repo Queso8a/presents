@@ -1,0 +1,195 @@
+
+
+:root {
+    --color-primary:#101014;
+    --color-secondary:#18181c;
+    --text-color:white;
+    --border-color:#2f2f32;
+    --input-color:#242428;
+    --font-title:"Montserrat";
+    --button-login-color:#00d4ff;
+}
+
+/*Remember to use 26px for 26px in icons for buttoms, preferably in format svg */
+
+body {
+    background-color: var(--color-primary);
+    color: var(--text-color);
+    font-family: sans-serif;
+}
+
+main {
+    display: flex ;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 90dvh;
+    
+}
+
+.form__input__aspect {
+    border-radius: 6px;
+    padding: 8px 0px;
+    color: white;
+}
+
+.form__title {
+    font-family: var(--font-title);
+    font-size: clamp(1rem,1.8rem,4rem);
+    margin: 10px 4px ;
+}
+
+.login__section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--color-secondary);
+    width: clamp(250px, 50%, 400px);
+    height: clamp(400px, 50%, 590px);
+    border: solid 2px var(--border-color);
+    border-radius: 6px;
+}
+
+
+.form__input {
+    border: solid 2px var(--border-color);
+    background-color:var(--input-color);
+    width: 90%;
+}
+
+.form__btn {
+    background: var(--button-login-color);
+    border: none;
+    color: var(--text-color);
+    width: 90%;
+    padding: 9px 0px;
+    font-size: large;
+}
+
+.form__icon {
+    position:relative;
+    width: 50px;
+    translate: 0px 10px;
+}
+
+.form__link {
+    margin-top: 8px;
+    text-decoration: none;
+    color: var(--button-login-color);
+}
+
+.form__conteiner__passwork > .form__input {
+    width: 80%;
+    border-radius: 6px 0px 0px 6px;
+    border-right:0px;;
+}
+
+.form__conteiner__passwork {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.form__view__password {
+    padding: 0px 20px;
+    background-image: url("../public/eye.svg");
+    background-repeat: no-repeat;
+    background-size: auto 90%;
+    background-position: center;
+    border: solid 2px var(--border-color);
+    background-color: var(--input-color)
+}
+
+/*This is buttom the external login services, see the examples to create your buttom*/
+
+.form__services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form__login_btn  {
+    padding: 10px 10px 10px 37px;
+    position: relative;
+    border-radius: 40px;
+    background: var(--color);
+    border: var(--border);
+    color: var(--text-color);
+    margin: 3px 4px;
+}
+
+.form__login_btn::before {
+    position: absolute;
+    left: 5px;
+    bottom: 0px;
+    content:" ";
+    background-image: var(--icon);
+    background-repeat: no-repeat;   
+    width: 30px;
+    height: 30px;
+}
+
+.form__conteiner__other__items {
+    display: flex;
+    justify-content: center;
+}
+
+
+.form__p {
+    margin-top: 8px;
+    display: flex;
+}
+
+/*examples for create your custom buttom:*/
+
+.form__login_btn.twitch {
+    --color:rebeccapurple;
+    --border:solid 2px rebeccapurple;
+    --text-color:white;
+    
+}
+
+.form__login_btn.twitch::before {
+    --icon:url("../public/twitchlogin.svg");
+}
+
+.form__login_btn.google {
+    --color:white;
+    --border:solid 2px white;
+    --text-color:black;
+    
+}
+
+.form__login_btn.google::before {
+    --icon:url("../public/google.svg");
+}
+
+
+.background__modal {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height:100dvh;
+    backdrop-filter: blur(30px);
+}   
+
+.modal__error__message {
+    position: absolute;
+    z-index: 9;
+    background: #2e0101;
+    border:solid 2px red;
+    padding:90px 20px;
+}
+
+.message__error {
+    font-family: var(--font-title);
+    font-size: 1.7rem;
+}
+
+.modal__error {
+    background: red;
+}

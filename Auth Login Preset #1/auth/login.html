@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar seccion</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <script src="login.js" ></script>
+</head>
+<body>
+    <main class="main__content">
+        <form id="form_st" class="login__section" action="/login/callback" method="get">
+            <img src="../public/onlyfans.png" class="form__icon">
+            
+            <h1 class="form__title">Iniciar Sesion</h1>
+            <label class="form__subtitle">Nombre de usuario</label>
+            <input id="user"  name="username" class="form__input form__input__aspect" type="text">
+            <label class="form__subtitle">Contraseña</label>
+            <div class="form__conteiner__passwork">
+                <input id="userPassword"  minlength="8" maxlength="20" name="user_password" class="form__input form__input__aspect"  type="password">
+                <button  id="viewpw" class="form__view__password"></button>
+            </div>
+            <div class="form__conteiner__other__items">
+                <a class="form__link" href="/auth/forget-password">Olvidaste tu Contraseña?</a>
+                <p class="form__p"><input type="checkbox" id="rememberCheck">Reemember password</p>
+            </div>
+            <input class="form__btn form__input__aspect" id="summitButton" value="Iniciar Seccion" type="submit">
+            <div class="form__services">
+            <a href="" >
+                <button class="form__login_btn google">
+                    Sing In with Google
+                </button>
+            </a>
+            <a href="" >
+                <button class="form__login_btn twitch">
+                    Sing In with Twitch
+                </button>
+            </a>    
+            </div>               
+        </form>
+        
+    </main> 
+    
+</body>
+</html>
